@@ -3,6 +3,9 @@
 ## Project Overview
 This is a portfolio-ready QA testing project for a sample e-commerce website. The project includes both a frontend demo website and testing artifacts for manual testing, API testing, defect reporting, regression testing, smoke testing, and cross-browser compatibility testing.
 
+## Live Website
+[View the deployed e-commerce QA demo](https://webqualityassurance.vercel.app/)
+
 ## Application Under Test
 Sample e-commerce website built with HTML, CSS, and JavaScript. It includes the following modules:
 
