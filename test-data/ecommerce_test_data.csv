@@ -1,0 +1,12 @@
+Data_ID,Scenario,Username,Password,Email,Product,Search_Keyword,Coupon,Address,Expected_Result
+TD-001,Valid login,qa_user01,Pass@123,qa_user01@example.com,,,,,User should log in successfully
+TD-002,Invalid login,qa_user01,Wrong@123,qa_user01@example.com,,,,,Error message should be displayed
+TD-003,Registration with valid data,new_user,Pass@123,new_user@example.com,,,,,Account should be created
+TD-004,Search valid product,,,,Wireless Mouse,mouse,,,Matching products should be displayed
+TD-005,Search invalid product,,,,No Product,xyzinvalid,,,No results message should be displayed
+TD-006,Apply valid coupon,qa_user01,Pass@123,qa_user01@example.com,Laptop Stand,,SAVE10,221B Baker Street,Discount should apply once
+TD-007,Apply invalid coupon,qa_user01,Pass@123,qa_user01@example.com,Laptop Stand,,FAKE50,221B Baker Street,Invalid coupon message should be shown
+TD-008,Checkout with empty address,qa_user01,Pass@123,qa_user01@example.com,USB Keyboard,,SAVE10,,Address validation should be shown
+TD-009,Add product to cart,qa_user01,Pass@123,qa_user01@example.com,Bluetooth Speaker,,,,Product should be added to cart
+TD-010,Remove product from cart,qa_user01,Pass@123,qa_user01@example.com,Bluetooth Speaker,,,,Cart total should update
+

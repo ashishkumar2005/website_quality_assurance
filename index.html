@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopEase E-commerce Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <a class="brand" href="#home" aria-label="ShopEase home">
+          <span class="brand-mark">S</span>
+          <span>ShopEase</span>
+        </a>
+        <div class="nav-links" aria-label="Main navigation">
+          <a href="#products">Products</a>
+          <a href="#cart">Cart</a>
+          <a href="#checkout">Checkout</a>
+          <a href="#orders">Orders</a>
+        </div>
+        <button class="cart-button" type="button" id="cartButton">
+          Cart <span id="cartCount">0</span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-content">
+          <p class="eyebrow">Demo e-commerce website for QA testing</p>
+          <h1>Shop products, test flows, and report defects.</h1>
+          <p>
+            A frontend project built with HTML, CSS, and JavaScript for manual
+            testing practice across login, search, cart, coupon, checkout, and
+            order confirmation workflows.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-link" href="#products">Start Shopping</a>
+            <a class="secondary-link" href="#login">Test Login</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section auth-section" id="login" aria-labelledby="loginTitle">
+        <div class="section-heading">
+          <p class="eyebrow">Account</p>
+          <h2 id="loginTitle">Login test area</h2>
+        </div>
+        <form class="auth-panel" id="loginForm">
+          <label>
+            Username
+            <input id="username" type="text" value="qa_user01" autocomplete="username" />
+          </label>
+          <label>
+            Password
+            <input id="password" type="password" value="Pass@123" autocomplete="current-password" />
+          </label>
+          <button class="primary-button" type="submit">Login</button>
+          <p class="form-message" id="loginMessage" role="status"></p>
+        </form>
+      </section>
+
+      <section class="section" id="products" aria-labelledby="productsTitle">
+        <div class="section-heading">
+          <p class="eyebrow">Catalog</p>
+          <h2 id="productsTitle">Products</h2>
+        </div>
+
+        <div class="toolbar" aria-label="Product controls">
+          <label>
+            Search
+            <input id="searchInput" type="search" placeholder="Search products" />
+          </label>
+          <label>
+            Category
+            <select id="categoryFilter">
+              <option value="all">All categories</option>
+              <option value="electronics">Electronics</option>
+              <option value="accessories">Accessories</option>
+              <option value="workspace">Workspace</option>
+            </select>
+          </label>
+          <label>
+            Sort
+            <select id="sortSelect">
+              <option value="featured">Featured</option>
+              <option value="low-high">Price: Low to High</option>
+              <option value="high-low">Price: High to Low</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="product-grid" id="productGrid"></div>
+      </section>
+
+      <section class="section cart-checkout-grid">
+        <div id="cart" class="panel" aria-labelledby="cartTitle">
+          <div class="section-heading compact">
+            <p class="eyebrow">Basket</p>
+            <h2 id="cartTitle">Shopping cart</h2>
+          </div>
+          <div id="cartItems" class="cart-items"></div>
+          <div class="coupon-row">
+            <input id="couponInput" type="text" placeholder="Coupon code: SAVE10" />
+            <button class="secondary-button" type="button" id="applyCoupon">Apply</button>
+          </div>
+          <p class="form-message" id="couponMessage" role="status"></p>
+          <div class="totals" id="cartTotals"></div>
+        </div>
+
+        <form id="checkout" class="panel checkout-panel" aria-labelledby="checkoutTitle">
+          <div class="section-heading compact">
+            <p class="eyebrow">Checkout</p>
+            <h2 id="checkoutTitle">Delivery details</h2>
+          </div>
+          <label>
+            Full name
+            <input id="fullName" type="text" value="Ashi QA" />
+          </label>
+          <label>
+            Email
+            <input id="email" type="email" value="qa_user01@example.com" />
+          </label>
+          <label>
+            Address
+            <textarea id="address" rows="3" placeholder="Enter delivery address">221B Baker Street</textarea>
+          </label>
+          <label>
+            Payment status
+            <select id="paymentStatus">
+              <option value="success">Successful payment</option>
+              <option value="failed">Failed payment</option>
+            </select>
+          </label>
+          <button class="primary-button" type="submit">Place Order</button>
+          <p class="form-message" id="checkoutMessage" role="status"></p>
+        </form>
+      </section>
+
+      <section class="section" id="orders" aria-labelledby="ordersTitle">
+        <div class="section-heading">
+          <p class="eyebrow">Order module</p>
+          <h2 id="ordersTitle">Order confirmation</h2>
+        </div>
+        <div class="order-panel" id="orderPanel">
+          <p>No order placed yet.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>ShopEase QA Demo | HTML, CSS, JavaScript</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
